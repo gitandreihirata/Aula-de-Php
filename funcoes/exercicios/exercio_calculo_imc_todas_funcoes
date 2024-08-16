@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+  /* 
+    Crie uma funcao que calcule o imc de uma pessoa passando seu peso idade.
+
+    Usar as 4 funcoes aprendidas, 
+    funcoes sem parametro e sem retorno,  
+    sem parametro e com retorno,
+    com parametro e sem retorno e
+    com paramentro e  com retorno
+
+   */
+
+
+ini_set('default_charset','UTF-8');
+$peso = 70;
+$altura = 1.60;
+
+calcular_imc_noparam_noreturn();
+
+calcular_imc_param_noreturn($peso, $altura);
+
+$imc_return = calcular_imc_noparam_return();
+echo "<p> Cálculo sem parâmetro e com retorno: $imc_return";
+
+$imc_param_return = calcular_imc_param_return($peso, $altura);
+echo "<p> Cálculo com parâmetro e com retorno: $imc_param_return";
+
+# Sem parâmetro e sem retorno
+function calcular_imc_noparam_noreturn() {
+    global $peso;
+    global $altura;
+    $imc = $peso / ($altura * $altura);
+    $imc = number_format($imc, 2);
+    echo "<p> Cálculo sem parâmetro e sem retorno: $imc";
+}
+
+# Com parâmetro e sem retorno
+function calcular_imc_param_noreturn($peso, $altura) {
+	$imc = $peso / ($altura * $altura);
+    $imc = number_format($imc, 2);
+    echo "<p> Cálculo com parâmetro e sem retorno: $imc";
+}
+
+# Sem parâmetro e com retorno
+function calcular_imc_noparam_return() {
+	global $peso;
+    global $altura;
+    $imc = ($peso / ($altura * $altura));
+    $imc = number_format($imc, 2);
+    return $imc;
+}
+
+# Com parâmetro e com retorno
+function calcular_imc_param_return($peso, $altura) {
+    $imc = ($peso / ($altura * $altura));
+    $imc = number_format($imc, 2);
+	return $imc;
+}
+?>
+
+</body>
+</html>
