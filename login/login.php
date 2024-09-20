@@ -18,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verifica se o usuário existe e se a senha está correta
         if ($usuario && password_verify($senha, $usuario['senha'])) {
             // Sessão para manter o usuário logado
-            $_SESSION['user_id'] = $usuario['id'];
-            $_SESSION['user_name'] = $usuario['nome'];
+            $_SESSION['idusuario'] = $usuario['idusuario'];
+            $_SESSION['nome'] = $usuario['nome'];
             echo "Login realizado com sucesso!";
             header("Location: dashboard.php"); // Redireciona para a página principal
             exit();
