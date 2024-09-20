@@ -55,11 +55,11 @@
                 echo  "<td>" . $row["email"]. "</td>";
 
                 echo  "<td>
-                            <a href='update.php?id=".$row['idPessoa']."'>
+                            <a href='update.php?idpessoa=".$row['idPessoa']."'>
                                 <button>Editar</button>
                            </a>
                          
-                           <a href='delete.php?id=".$row['idPessoa']."'
+                           <a href='delete.php?idpessoa=".$row['idPessoa']."'
                               onclick ='return confirm(\"Deseja deletar?\")'>
                                 <button>Deletar</button>
                            </a> 
