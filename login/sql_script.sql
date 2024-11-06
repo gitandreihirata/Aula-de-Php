@@ -6,5 +6,5 @@ CREATE TABLE  `exercicio`.`pessoa` (
   `email` varchar(45) NOT NULL,
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`idpessoa`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
